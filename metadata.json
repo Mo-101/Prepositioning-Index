@@ -1,0 +1,5 @@
+{
+  "name": "DeepCAL++ vΩ",
+  "description": "Symbolic Logistics Intelligence Engine powered by Gemini. Analyzes historical shipping data to rank freight forwarders using TOPSIS algorithms and provides AI-driven logistical oracle insights.",
+  "requestFramePermissions": []
+}
