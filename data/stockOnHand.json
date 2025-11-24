@@ -1,0 +1,204 @@
+{
+  "name": "Stock on Hand",
+  "description": "Warehouse inventory snapshot used by the supply machine for Masterclass delivery planning.",
+  "items": [
+    {
+      "commodity_id": "IEHK_BASIC_MALARIA",
+      "description": "(IEHK 2017, BASIC) MODULE, MALARIA",
+      "category": "Emergency Health Kits",
+      "unit_cost_usd": 669.83,
+      "avg_lead_time_days": 60,
+      "stock_on_hand": 75,
+      "quantity_in_pipeline": 22
+    },
+    {
+      "commodity_id": "IEHK_BASIC_EQUIP",
+      "description": "(IEHK 2017, BASIC) MODULE, RENEWABLE AND EQUIPMENT",
+      "category": "Emergency Health Kits",
+      "unit_cost_usd": 176.8,
+      "avg_lead_time_days": 75,
+      "stock_on_hand": 143,
+      "quantity_in_pipeline": 30
+    },
+    {
+      "commodity_id": "IEHK_BASIC_MEDS",
+      "description": "(IEHK 2017, BASIC) MODULE, MEDICINES",
+      "category": "Emergency Health Kits",
+      "unit_cost_usd": 239.34,
+      "avg_lead_time_days": 60,
+      "stock_on_hand": 100,
+      "quantity_in_pipeline": 30
+    },
+    {
+      "commodity_id": "CHOLERA_KIT_CENTRAL_DRUGS",
+      "description": "(kit cholera central) MODULE, DRUGS (1.1)",
+      "category": "Emergency Health Kits",
+      "unit_cost_usd": 1502.78,
+      "avg_lead_time_days": 45,
+      "stock_on_hand": 22,
+      "quantity_in_pipeline": 27
+    },
+    {
+      "commodity_id": "CHOLERA_KIT_CENTRAL_EQUIP",
+      "description": "(kit cholera central) MODULE, EQUIPMENT (1.3)",
+      "category": "Emergency Health Kits",
+      "unit_cost_usd": 251.36,
+      "avg_lead_time_days": 50,
+      "stock_on_hand": 4,
+      "quantity_in_pipeline": 13
+    },
+    {
+      "commodity_id": "CHOLERA_KIT_CENTRAL_RENEW",
+      "description": "(kit cholera central) MODULE, RENEWABLE SUPPLIES (1.2)",
+      "category": "Emergency Health Kits",
+      "unit_cost_usd": 792.58,
+      "avg_lead_time_days": 30,
+      "stock_on_hand": 15,
+      "quantity_in_pipeline": 22
+    },
+    {
+      "commodity_id": "CHOLERA_KIT_PERIPHERY_DRUGS",
+      "description": "(kit cholera periphery) MODULE, DRUGS (2.1)",
+      "category": "Emergency Health Kits",
+      "unit_cost_usd": 811.02,
+      "avg_lead_time_days": 45,
+      "stock_on_hand": 21,
+      "quantity_in_pipeline": 31
+    },
+    {
+      "commodity_id": "CHOLERA_KIT_PERIPHERY_EQUIP",
+      "description": "(kit cholera periphery) MODULE, EQUIPMENT (2.3)",
+      "category": "Emergency Health Kits",
+      "unit_cost_usd": 199.01,
+      "avg_lead_time_days": 50,
+      "stock_on_hand": 2,
+      "quantity_in_pipeline": 11
+    },
+    {
+      "commodity_id": "CHOLERA_KIT_PERIPHERY_RENEW",
+      "description": "(kit cholera periphery) MODULE, RENEWABLE SUPPLIES (2.2)",
+      "category": "Emergency Health Kits",
+      "unit_cost_usd": 711.47,
+      "avg_lead_time_days": 30,
+      "stock_on_hand": 16,
+      "quantity_in_pipeline": 18
+    },
+    {
+      "commodity_id": "CHOLERA_KIT_COMMUNITY_DRUGS",
+      "description": "(kit cholera community) MODULE, DRUGS (3.1)",
+      "category": "Emergency Health Kits",
+      "unit_cost_usd": 101.9,
+      "avg_lead_time_days": 40,
+      "stock_on_hand": 67,
+      "quantity_in_pipeline": 70
+    },
+    {
+      "commodity_id": "CHOLERA_KIT_COMMUNITY_CARE",
+      "description": "(kit cholera community) MODULE, ORP COMMUNITY BASED CARE (3.2)",
+      "category": "Emergency Health Kits",
+      "unit_cost_usd": 267.41,
+      "avg_lead_time_days": 30,
+      "stock_on_hand": 4,
+      "quantity_in_pipeline": 50
+    },
+    {
+      "commodity_id": "RDT_CHOLERA_SD_BIOLINE",
+      "description": "RDT CHOLERA (SD Bioline 44FK30), Ag, stool, w/acc., kit-20",
+      "category": "Lab & Diagnostics",
+      "unit_cost_usd": 41.8,
+      "avg_lead_time_days": 30,
+      "stock_on_hand": 396,
+      "quantity_in_pipeline": 0
+    },
+    {
+      "commodity_id": "BODY_BAG_ADULT",
+      "description": "BODY BAG, 8 handles, U-shaped zip, white, 400 microns, adult, 230 x 100 cm, box-5",
+      "category": "PPE",
+      "unit_cost_usd": 91.61,
+      "avg_lead_time_days": 35,
+      "stock_on_hand": 81,
+      "quantity_in_pipeline": 0
+    },
+    {
+      "commodity_id": "BODY_BAG_CHILD",
+      "description": "BODY BAG, 4 handles, U-shaped zip, white, 400 microns, child, 150 x 100 cm, box-5",
+      "category": "PPE",
+      "unit_cost_usd": 52.38,
+      "avg_lead_time_days": 35,
+      "stock_on_hand": 0,
+      "quantity_in_pipeline": 0
+    },
+    {
+      "commodity_id": "COVERALL_TYVEK_L",
+      "description": "COVERALL (Tyvek 800J), cat III, type 3/4/5/6, hooded, s.u., white, size L, pack-25",
+      "category": "PPE",
+      "unit_cost_usd": 205.0,
+      "avg_lead_time_days": 45,
+      "stock_on_hand": 0,
+      "quantity_in_pipeline": 0
+    },
+    {
+      "commodity_id": "GLOVES_SURGICAL_6_5",
+      "description": "GLOVES, SURGICAL (Fitone), latex, pf, sterile, size 6.5, pair, case-500",
+      "category": "PPE",
+      "unit_cost_usd": 124.21,
+      "avg_lead_time_days": 20,
+      "stock_on_hand": 0,
+      "quantity_in_pipeline": 0
+    },
+    {
+      "commodity_id": "EBOLA_KIT_TREATMENT_PPE",
+      "description": "(kit ebola treatment) MODULE, PPE",
+      "category": "Emergency Health Kits",
+      "unit_cost_usd": 4500.0,
+      "avg_lead_time_days": 60,
+      "stock_on_hand": 10,
+      "quantity_in_pipeline": 50
+    },
+    {
+      "commodity_id": "EBOLA_KIT_TREATMENT_MEDS",
+      "description": "(kit ebola treatment) MODULE, MEDICINES",
+      "category": "Emergency Health Kits",
+      "unit_cost_usd": 3200.0,
+      "avg_lead_time_days": 70,
+      "stock_on_hand": 0,
+      "quantity_in_pipeline": 0
+    },
+    {
+      "commodity_id": "EBOLA_KIT_BURIAL_SDB",
+      "description": "(kit ebola burial) MODULE, SAFE BURIAL",
+      "category": "Emergency Health Kits",
+      "unit_cost_usd": 800.0,
+      "avg_lead_time_days": 50,
+      "stock_on_hand": 25,
+      "quantity_in_pipeline": 10
+    },
+    {
+      "commodity_id": "KIT_CHOLERA_INVESTIGATION",
+      "description": "KIT, CHOLERA INVESTIGATION (5), complete",
+      "category": "Lab & Diagnostics",
+      "unit_cost_usd": 800.28,
+      "avg_lead_time_days": 25,
+      "stock_on_hand": 0,
+      "quantity_in_pipeline": 0
+    },
+    {
+      "commodity_id": "ISOTHERMAL_BOX_16_8L",
+      "description": "ISOTHERMAL BOX (Chilltherm-CTR17), 16.8L, int. dim. 30.5x25x22cm",
+      "category": "Cold Chain",
+      "unit_cost_usd": 97.87,
+      "avg_lead_time_days": 28,
+      "stock_on_hand": 0,
+      "quantity_in_pipeline": 0
+    },
+    {
+      "commodity_id": "TENT_MULTIPURPOSE_48M",
+      "description": "TENT MULTIPURPOSE (XPERT 48), 48m2, aluminium frame, groundsheet, w/acc",
+      "category": "Field Support",
+      "unit_cost_usd": 2486.66,
+      "avg_lead_time_days": 90,
+      "stock_on_hand": 0,
+      "quantity_in_pipeline": 0
+    }
+  ]
+}
