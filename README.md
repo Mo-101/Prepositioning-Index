@@ -79,3 +79,69 @@ Outbreak monitoring (mocked) -> demand estimation (kits/needs) -> gap vs invento
 - Add "Why this forwarder?" explanations and ETA predictions via carrier APIs.
 - Scenario presets (dual outbreaks, customs delays, corridor closures).
 - Centralize hazard/kit schemas in `types.ts` for stricter typing.
+
+## 🧠 Core Computational Intelligence Framework: DEEPCAL++
+
+DeepCAL++ is structured around a hybrid decision-support system combining:
+
+## 1. 🔺 Neutrosophic AHP (Analytic Hierarchy Process)
+
+AHP is used to derive relative weights of criteria (e.g., time, cost, reliability).
+
+The neutrosophic logic enhancement allows modeling of indeterminacy, uncertainty, and incompleteness in expert judgments.
+
+Instead of classic crisp pairwise comparison matrices, Neutrosophic AHP incorporates truth-membership, indeterminacy-membership, and falsity-membership degrees for each comparison .
+
+This is crucial in logistics where expert opinions are often partially reliable, and exact preferences may be fuzzy or conflicting.
+
+## 2. 🏆 Neutrosophic TOPSIS
+
+Once weights are assigned via Neutrosophic AHP, TOPSIS (Technique for Order Preference by Similarity to Ideal Solution) ranks the alternatives.
+
+In the DeepCAL++ implementation, the positive ideal solution (PIS) and negative ideal solution (NIS) are extended into the neutrosophic domain.
+
+This allows DeepCAL++ to compute closeness coefficients that better reflect real-world ambiguities in the data (e.g., transit time ranges, on-time probabilities) .
+
+Compared to classical TOPSIS, this version improves the resilience of decision-making under imperfect or ambiguous logistics intelligence.
+
+## 3. ⚪ Grey Relational Analysis (GRA)
+
+Grey Theory is integrated to complement the decision process when data is incomplete or partially known, especially in fast-evolving emergency contexts.
+
+GRA computes relational grades between decision alternatives and an ideal sequence based on known reference behavior.
+
+In DeepCAL++, it is used to validate or adjust the final rankings when historical data is sparse or uncertain (e.g., new forwarders with limited prior shipments) .
+
+## 🔍 Integration Flow in DeepCAL++
+
+Data Preprocessing: Normalize KPIs (transit time, cost per kg, on-time rate).
+
+Weight Derivation: Use Neutrosophic AHP for dynamic criteria weighting (context-aware).
+
+Scoring: Apply Neutrosophic TOPSIS to rank options using closeness coefficients.
+
+Stabilization: Apply Grey Relational Analysis to mitigate the effects of missing or weak data.
+
+## 🧪 Scientific Robustness
+
+Supports multi-criteria, multi-alternative decisions with uncertain or vague information.
+
+Designed for logistics under crisis scenarios—health emergencies, disrupted supply chains, volatile borders.
+
+Matches the epistemic uncertainty in real-world humanitarian decision-making environments.
+
+## 🧠 DeepCAL++ is not an interface—it's an Inference Engine.
+
+The term “engine” here is accurate: what powers DeepCAL++ is not hardcoded logic, but adaptive, modular decision intelligence that can evolve with data, context, and emergent uncertainties.
+
+If you're preparing to present this as part of a scientific justification, pitch, or academic validation, I recommend visualizing the flow from:
+
+Input (Forwarder Data + Contextual Priors) →
+
+Fuzzified Weighting (Neutrosophic AHP) →
+
+Ranking (Neutrosophic TOPSIS) →
+
+Correction Layer (Grey Relational Adjustment) →
+
+Final Output (Ranked Decision with Robust Justification)
