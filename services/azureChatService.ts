@@ -38,7 +38,10 @@ const SYSTEM_PROMPT = [
 
 const LPI_SYSTEM_PROMPT = [
     'You are the Azure orchestration layer for the Logistics Prepositioning Index (LPI).',
-    'Return valid JSON that matches the LpiResult type with budgetAnalysis, commodityStockpile, logisticsPlan, and planningAssumptions.',
+    'CRITICAL: Return ONLY valid, well-formed JSON that matches the LpiResult type.',
+    'The JSON must include: changeSummary, executiveSummary, riskAssessment, logisticsConstraints, planningAssumptions, commodityStockpile, logisticsPlan, budgetAnalysis, and keyInterventions.',
+    'Do NOT include any explanatory text, markdown formatting, or comments outside the JSON object.',
+    'Ensure all JSON is properly escaped and valid. Use double quotes for strings.',
     'Keep responses concise and operational. Always ground outputs in the provided scenario and user follow-ups.',
 ].join(' ');
 
@@ -194,14 +197,64 @@ export const chatWithAzure = async (messages: ChatMessage[], context?: string): 
 };
 
 const parseJsonFromMessage = (content: string): LpiResult => {
-    const start = content.indexOf('{');
-    const end = content.lastIndexOf('}');
-    if (start === -1 || end === -1 || end <= start) {
-        throw new Error('Azure response did not contain JSON payload.');
+    let jsonText = '';
+
+    // Try to extract JSON from markdown code blocks first
+    const codeBlockMatch = content.match(/```(?:json)?\s*(\{[\s\S]*?\})\s*```/);
+    if (codeBlockMatch) {
+        jsonText = codeBlockMatch[1];
+    } else {
+        // Fallback to finding first { and last }
+        const start = content.indexOf('{');
+        const end = content.lastIndexOf('}');
+        if (start === -1 || end === -1 || end <= start) {
+            throw new Error('Azure response did not contain valid JSON. Please retry the operation.');
+        }
+        jsonText = content.slice(start, end + 1);
     }
 
-    const jsonText = content.slice(start, end + 1);
-    return JSON.parse(jsonText) as LpiResult;
+    // Parse and validate the JSON
+    let parsed: any;
+    try {
+        parsed = JSON.parse(jsonText);
+    } catch (parseError) {
+        console.error('JSON parse error:', parseError);
+        console.error('Attempted to parse:', jsonText.substring(0, 200));
+        throw new Error('Azure returned malformed JSON. The AI response could not be parsed. Please retry.');
+    }
+
+    // Basic validation - ensure it has expected LpiResult structure
+    if (!parsed || typeof parsed !== 'object') {
+        throw new Error('Azure response was not a valid object. Please retry.');
+    }
+
+    // Provide defaults for missing optional fields
+    const result: LpiResult = {
+        changeSummary: parsed.changeSummary || '',
+        executiveSummary: parsed.executiveSummary || '',
+        riskAssessment: parsed.riskAssessment || {
+            riskLevel: 'Unknown',
+            reproductionNumberR0: 0,
+            projectedSpreadRadiusKm: 0
+        },
+        logisticsConstraints: parsed.logisticsConstraints || [],
+        planningAssumptions: parsed.planningAssumptions || [],
+        commodityStockpile: parsed.commodityStockpile || [],
+        logisticsPlan: parsed.logisticsPlan || {
+            prepositioningHub: 'Not specified',
+            totalWeightKg: 0,
+            totalVolumeCbm: 0,
+            transportMode: 'Unknown',
+            estimatedLeadTimeDays: 0
+        },
+        budgetAnalysis: parsed.budgetAnalysis || {
+            totalCostUSD: 0,
+            breakdown: []
+        },
+        keyInterventions: parsed.keyInterventions || []
+    };
+
+    return result;
 };
 
 const buildLpiUserPrompt = (scenario: LpiScenario, instruction?: string): string => {
