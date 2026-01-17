@@ -1,5 +1,12 @@
 import { ShipmentData, ForwarderInputDef } from './types';
 
+export const INDEX_WEIGHTS = {
+    risk: 0.30,
+    preparedness: 0.25,
+    vulnerability: 0.25,
+    outbreak: 0.20
+};
+
 export const HISTORICAL_DATA: ShipmentData[] = [
     {
         request_reference: "SR_24-001_NBO hub_Zimbabwe",
