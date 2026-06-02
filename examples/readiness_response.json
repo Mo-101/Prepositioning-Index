@@ -1,0 +1,16 @@
+{
+  "score": 0.784,
+  "normalized_weights": {
+    "inventory_coverage": 0.35,
+    "route_reliability": 0.25,
+    "facility_condition": 0.2,
+    "demand_urgency": 0.2
+  },
+  "contributions": {
+    "inventory_coverage": 0.287,
+    "route_reliability": 0.185,
+    "facility_condition": 0.182,
+    "demand_urgency": 0.13
+  },
+  "explanation": "Readiness is the weighted sum of normalized logistics criteria. The largest contribution is inventory_coverage (0.287000); the lowest raw criterion is demand_urgency (0.650000)."
+}

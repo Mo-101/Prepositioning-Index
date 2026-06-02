@@ -1,0 +1,12 @@
+{
+  "inventory_coverage": 0.82,
+  "route_reliability": 0.74,
+  "facility_condition": 0.91,
+  "demand_urgency": 0.65,
+  "weights": {
+    "inventory_coverage": 0.35,
+    "route_reliability": 0.25,
+    "facility_condition": 0.2,
+    "demand_urgency": 0.2
+  }
+}
