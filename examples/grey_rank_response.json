@@ -1,0 +1,47 @@
+{
+  "normalized_matrix": [
+    [
+      1.0,
+      0.0,
+      0.444444
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.866667,
+      0.5,
+      1.0
+    ]
+  ],
+  "grey_relational_coefficients": [
+    [
+      1.0,
+      0.333333,
+      0.473684
+    ],
+    [
+      0.333333,
+      1.0,
+      0.333333
+    ],
+    [
+      0.789474,
+      0.5,
+      1.0
+    ]
+  ],
+  "grey_relational_grades": {
+    "hub-alpha": 0.649123,
+    "hub-bravo": 0.5,
+    "hub-charlie": 0.79079
+  },
+  "ranking": [
+    "hub-charlie",
+    "hub-alpha",
+    "hub-bravo"
+  ],
+  "explanation": "Grey Relational Analysis normalized benefit and cost criteria to [0, 1], compared each alternative with an all-one ideal sequence using rho=0.500, and ranked alternatives by weighted grey relational grade. Missing values imputed by column mean: 1."
+}

@@ -1,0 +1,108 @@
+{
+  "ranking": [
+    "forward-hub",
+    "regional-hub",
+    "mobile-cache"
+  ],
+  "scores": [
+    {
+      "alternative": "forward-hub",
+      "neutrosophic_scores": {
+        "stock_readiness": 0.9,
+        "deployment_cost": 0.533333,
+        "access_reliability": 0.85
+      },
+      "neutrosophic_explanations": {
+        "stock_readiness": "Neutrosophic score is the average of truth, one minus indeterminacy, and one minus falsity: (0.900000 + 0.900000 + 0.900000) / 3 = 0.900000.",
+        "deployment_cost": "Neutrosophic score is the average of truth, one minus indeterminacy, and one minus falsity: (0.350000 + 0.800000 + 0.450000) / 3 = 0.533333.",
+        "access_reliability": "Neutrosophic score is the average of truth, one minus indeterminacy, and one minus falsity: (0.820000 + 0.850000 + 0.880000) / 3 = 0.850000."
+      },
+      "grey_grade": 1.0,
+      "topsis_closeness": 1.0,
+      "final_score": 1.0,
+      "rank": 1,
+      "explanation": "forward-hub ranked #1 from the average of grey grade 1.000000 and TOPSIS closeness 1.000000."
+    },
+    {
+      "alternative": "regional-hub",
+      "neutrosophic_scores": {
+        "stock_readiness": 0.813333,
+        "deployment_cost": 0.776667,
+        "access_reliability": 0.773333
+      },
+      "neutrosophic_explanations": {
+        "stock_readiness": "Neutrosophic score is the average of truth, one minus indeterminacy, and one minus falsity: (0.780000 + 0.820000 + 0.840000) / 3 = 0.813333.",
+        "deployment_cost": "Neutrosophic score is the average of truth, one minus indeterminacy, and one minus falsity: (0.680000 + 0.850000 + 0.800000) / 3 = 0.776667.",
+        "access_reliability": "Neutrosophic score is the average of truth, one minus indeterminacy, and one minus falsity: (0.700000 + 0.800000 + 0.820000) / 3 = 0.773333."
+      },
+      "grey_grade": 0.498913,
+      "topsis_closeness": 0.512197,
+      "final_score": 0.505555,
+      "rank": 2,
+      "explanation": "regional-hub ranked #2 from the average of grey grade 0.498913 and TOPSIS closeness 0.512197."
+    },
+    {
+      "alternative": "mobile-cache",
+      "neutrosophic_scores": {
+        "stock_readiness": 0.71,
+        "deployment_cost": 0.866667,
+        "access_reliability": 0.683333
+      },
+      "neutrosophic_explanations": {
+        "stock_readiness": "Neutrosophic score is the average of truth, one minus indeterminacy, and one minus falsity: (0.620000 + 0.750000 + 0.760000) / 3 = 0.710000.",
+        "deployment_cost": "Neutrosophic score is the average of truth, one minus indeterminacy, and one minus falsity: (0.820000 + 0.900000 + 0.880000) / 3 = 0.866667.",
+        "access_reliability": "Neutrosophic score is the average of truth, one minus indeterminacy, and one minus falsity: (0.580000 + 0.720000 + 0.750000) / 3 = 0.683333."
+      },
+      "grey_grade": 0.333333,
+      "topsis_closeness": 0.0,
+      "final_score": 0.166666,
+      "rank": 3,
+      "explanation": "mobile-cache ranked #3 from the average of grey grade 0.333333 and TOPSIS closeness 0.000000."
+    }
+  ],
+  "normalized_matrix": [
+    [
+      1.0,
+      1.0,
+      1.0
+    ],
+    [
+      0.543858,
+      0.269999,
+      0.539999
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "grey_relational_coefficients": [
+    [
+      1.0,
+      1.0,
+      1.0
+    ],
+    [
+      0.522935,
+      0.406504,
+      0.520833
+    ],
+    [
+      0.333333,
+      0.333333,
+      0.333333
+    ]
+  ],
+  "grey_relational_grades": {
+    "forward-hub": 1.0,
+    "regional-hub": 0.498913,
+    "mobile-cache": 0.333333
+  },
+  "topsis_closeness": {
+    "forward-hub": 1.0,
+    "regional-hub": 0.512197,
+    "mobile-cache": 0.0
+  },
+  "explanation": "Neutrosophic triples were converted to deterministic scores, normalized by benefit/cost criterion type, evaluated with Grey Relational Analysis, and combined with TOPSIS closeness for explainable emergency decision ranking."
+}

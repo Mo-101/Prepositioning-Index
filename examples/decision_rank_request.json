@@ -1,0 +1,76 @@
+{
+  "alternatives": [
+    "forward-hub",
+    "regional-hub",
+    "mobile-cache"
+  ],
+  "criteria": [
+    "stock_readiness",
+    "deployment_cost",
+    "access_reliability"
+  ],
+  "criteria_weights": {
+    "stock_readiness": 0.45,
+    "deployment_cost": 0.2,
+    "access_reliability": 0.35
+  },
+  "criterion_types": {
+    "stock_readiness": "benefit",
+    "deployment_cost": "cost",
+    "access_reliability": "benefit"
+  },
+  "uncertainty_triples": [
+    [
+      {
+        "truth": 0.9,
+        "indeterminacy": 0.1,
+        "falsity": 0.1
+      },
+      {
+        "truth": 0.35,
+        "indeterminacy": 0.2,
+        "falsity": 0.55
+      },
+      {
+        "truth": 0.82,
+        "indeterminacy": 0.15,
+        "falsity": 0.12
+      }
+    ],
+    [
+      {
+        "truth": 0.78,
+        "indeterminacy": 0.18,
+        "falsity": 0.16
+      },
+      {
+        "truth": 0.68,
+        "indeterminacy": 0.15,
+        "falsity": 0.2
+      },
+      {
+        "truth": 0.7,
+        "indeterminacy": 0.2,
+        "falsity": 0.18
+      }
+    ],
+    [
+      {
+        "truth": 0.62,
+        "indeterminacy": 0.25,
+        "falsity": 0.24
+      },
+      {
+        "truth": 0.82,
+        "indeterminacy": 0.1,
+        "falsity": 0.12
+      },
+      {
+        "truth": 0.58,
+        "indeterminacy": 0.28,
+        "falsity": 0.25
+      }
+    ]
+  ],
+  "rho": 0.5
+}
