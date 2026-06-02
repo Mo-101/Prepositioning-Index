@@ -1,11 +1,19 @@
 {
   "builds": [
     {
+      "src": "api/tracking.ts",
+      "use": "@vercel/node"
+    },
+    {
       "src": "api/index.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
+    {
+      "src": "/api/tracking",
+      "dest": "api/tracking.ts"
+    },
     {
       "src": "/(.*)",
       "dest": "api/index.py"

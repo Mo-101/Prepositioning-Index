@@ -58,6 +58,12 @@ VITE_MAPBOX_TOKEN=your-mapbox-token
 - `npm run health:live` sends a short ping to Azure and Gemini; run it when keys are loaded and you want proof of life before deploy.
 
 
+## Live Shipment Tracking Canvas
+
+The LPI workspace includes a `tracking` tab that renders public transit telemetry with Mapbox GL JS when `VITE_MAPBOX_TOKEN` is configured. The tab calls `/api/tracking?shipmentId=TRK-EPR-9921`, draws the route as a GeoJSON LineString, and marks each waypoint as `Passed`, `Current`, or `Pending`. If no Mapbox token is available, the component falls back to a structured dark-mode telemetry panel so shipment status remains visible.
+
+The public tracking endpoint is implemented at `api/tracking.ts`; Vercel routes `/api/tracking` to the Node function before the Python FastAPI catch-all route.
+
 ## Prepositioning Index API Examples
 
 `deepcal` is the internal Python package name. Public-facing deployments should use a neutral service name such as **Prepositioning Index API** or **Logistics Readiness API**.

@@ -21,5 +21,7 @@ def test_vercel_routes_backend_traffic_to_python_entrypoint() -> None:
     config = json.loads(Path("vercel.json").read_text())
 
     assert handler is app
-    assert config["builds"] == [{"src": "api/index.py", "use": "@vercel/python"}]
-    assert config["routes"] == [{"src": "/(.*)", "dest": "api/index.py"}]
+    assert {"src": "api/index.py", "use": "@vercel/python"} in config["builds"]
+    assert {"src": "api/tracking.ts", "use": "@vercel/node"} in config["builds"]
+    assert config["routes"][0] == {"src": "/api/tracking", "dest": "api/tracking.ts"}
+    assert config["routes"][-1] == {"src": "/(.*)", "dest": "api/index.py"}

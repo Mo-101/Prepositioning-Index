@@ -3,17 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview",
-        "health": "node scripts/healthcheck.mjs",
-        "health:live": "node scripts/healthcheck.mjs --live"
-    },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "health": "node scripts/healthcheck.mjs",
+    "health:live": "node scripts/healthcheck.mjs --live"
+  },
   "dependencies": {
+    "@google/genai": "^1.30.0",
+    "mapbox-gl": "^3.24.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@google/genai": "^1.30.0",
     "recharts": "^3.5.0"
   },
   "devDependencies": {
