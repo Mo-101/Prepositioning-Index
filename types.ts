@@ -251,6 +251,25 @@ export interface ForwarderInputDef {
     defaultDays: number;
 }
 
+// --- Public Transit Tracking Types ---
+
+export interface TransitWaypoint {
+    name: string;
+    coordinates: [number, number];
+    timestamp?: string;
+    status: 'Passed' | 'Current' | 'Pending';
+}
+
+export interface TransitTelemetry {
+    shipmentId: string;
+    origin: string;
+    destination: string;
+    status: 'Staged' | 'Dispatched' | 'In-Transit' | 'Delivered' | 'Delayed';
+    currentLocation: [number, number];
+    routeGeometry: [number, number][];
+    waypoints: TransitWaypoint[];
+}
+
 // --- LPI AI Types ---
 
 export interface LpiScenario {

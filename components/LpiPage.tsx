@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { LpiScenario, LpiResult } from '../types';
 import { ChatMessage, generateLpiPlanWithAzure, refineLpiPlanWithAzure } from '../services/azureChatService';
+import TrackingMap from './TrackingMap';
 
 const LpiPage: React.FC = () => {
     const [scenario, setScenario] = useState<LpiScenario>({
@@ -276,7 +277,7 @@ const LpiPage: React.FC = () => {
 
                         {/* Tabs Navigation */}
                         <div className="bg-slate-900/50 border-b border-purple-500/20 flex overflow-x-auto" role="tablist">
-                            {['summary', 'commodities', 'budget'].map(tab => (
+                            {['summary', 'commodities', 'budget', 'tracking'].map(tab => (
                                 <button
                                     key={tab}
                                     role="tab"
@@ -371,6 +372,20 @@ const LpiPage: React.FC = () => {
                                             ${results.budgetAnalysis?.totalCostUSD?.toLocaleString()}
                                         </span>
                                     </div>
+                                </div>
+                            )}
+
+                            {activeTab === 'tracking' && (
+                                <div className="space-y-4 animate-[fadeIn_0.3s]">
+                                    <div className="p-4 bg-gray-900 border border-gray-800 rounded-lg">
+                                        <h3 className="text-lg font-semibold text-gray-200 mb-2">
+                                            Live Corridor Logistics Stream
+                                        </h3>
+                                        <p className="text-xs text-gray-400 mb-4">
+                                            Displaying public shipment trajectories across formal physical routes.
+                                        </p>
+                                    </div>
+                                    <TrackingMap shipmentId="TRK-EPR-9921" />
                                 </div>
                             )}
                         </div>

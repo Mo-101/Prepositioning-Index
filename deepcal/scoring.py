@@ -25,19 +25,11 @@ def calculate_readiness(readiness: ReadinessInput) -> ReadinessResult:
         "demand_urgency": readiness.demand_urgency,
     }
     weight_total = sum(readiness.weights.values())
-    normalized_weights = {
-        name: weight / weight_total for name, weight in readiness.weights.items()
-    }
-    contributions = {
-        name: values[name] * normalized_weights[name] for name in values
-    }
+    normalized_weights = {name: weight / weight_total for name, weight in readiness.weights.items()}
+    contributions = {name: values[name] * normalized_weights[name] for name in values}
     score = round(sum(contributions.values()), 6)
-    rounded_contributions = {
-        name: round(value, 6) for name, value in contributions.items()
-    }
-    rounded_weights = {
-        name: round(value, 6) for name, value in normalized_weights.items()
-    }
+    rounded_contributions = {name: round(value, 6) for name, value in contributions.items()}
+    rounded_weights = {name: round(value, 6) for name, value in normalized_weights.items()}
     strongest = max(rounded_contributions, key=lambda name: rounded_contributions[name])
     weakest = min(values, key=lambda name: values[name])
     explanation = (

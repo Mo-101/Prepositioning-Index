@@ -8,8 +8,9 @@ version = "0.1.0"
 description = "Deterministic emergency-logistics decision engine for prepositioning and routing."
 requires-python = ">=3.11"
 dependencies = [
-  "fastapi>=0.115",
+  "fastapi>=0.115,<0.136",
   "pydantic>=2.8",
+  "starlette>=0.46,<1.0",
 ]
 
 [project.optional-dependencies]
@@ -35,3 +36,6 @@ select = ["E", "F", "I", "UP", "B", "SIM"]
 python_version = "3.11"
 strict = true
 plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
